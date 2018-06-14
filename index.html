@@ -363,5 +363,21 @@ burgermenu.addEventListener('click', function(){
   }
 });
 
+//scollup to show Header (grave chiant pour l'animation xD)
+var header = document.querySelector('.row1');
+var lastScrollTop = 0;
+
+window.addEventListener("scroll", function(){
+   var st = window.pageYOffset || document.documentElement.scrollTop;
+   if (st > lastScrollTop){
+      header.style.position = "";
+   } else {
+     header.style.position = "fixed";
+     header.style.top = "0";
+   }
+   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+}, false);
+
+
 </script>
 </html>
