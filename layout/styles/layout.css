@@ -167,7 +167,9 @@
 			margin-bottom: 0;
 		}
 		.bgded {
-			background-image:url('../../images/demo/backgrounds/01.png');
+			background-image:url('http://totemkeen.com/wp-content/uploads/2015/10/arma-1440x720.jpg');
+			background-size: cover;
+			object-fit: fill;
 		}
 		.bgded2 {
 			background-image:url('../../images/demo/backgrounds/02.png');
