@@ -8,6 +8,9 @@
 </head>
 <body id="top toppage">
 <div class="scrolltotop"></div>
+<div class="burgermenu">
+  <div class="bugermenuline"></div>
+</div>
 <div class="bgded overlay light" >
   <div class="wrapper row0">
     <div id="topbar" class="hoc clear">
@@ -342,6 +345,23 @@ scrolltotop.addEventListener('click', function() {
   });
 })
 
+//burgermenu
+
+var burgermenu = document.querySelector('.burgermenu');
+var menu = document.querySelector('#topbar');
+counter = 0
+
+burgermenu.addEventListener('click', function(){
+  counter++
+  console.log(counter);
+  if (counter === 1) {
+    menu.style.display = 'flex';
+  }
+  if (counter === 2) {
+    menu.style.display = 'none';
+    counter = 0    
+  }
+});
 
 </script>
 </html>

@@ -167,16 +167,16 @@
 			margin-bottom: 0;
 		}
 		.bgded {
-			background-image:url('images/demo/backgrounds/01.png');
+			background-image:url('../../images/demo/backgrounds/01.png');
 		}
 		.bgded2 {
-			background-image:url('images/demo/backgrounds/02.png');
+			background-image:url('../../images/demo/backgrounds/02.png');
 		}
 		.bgded3 {
-			background-image:url('images/demo/backgrounds/03.png');
+			background-image:url('../../images/demo/backgrounds/03.png');
 		}
 		.bgded4 {
-			background-image:url('images/demo/backgrounds/04.png');
+			background-image:url('../../images/demo/backgrounds/04.png');
 		}
 		/* Used when elements stack in smaller viewports */
 
@@ -479,7 +479,7 @@
 		}
 
 		#mainav ul ul {
-			z-index: 9999;
+			z-index: 100;
 			position: absolute;
 			width: 180px;
 			text-transform: none;
@@ -702,7 +702,7 @@
 		/* Back to Top */
 
 		#backtotop {
-			z-index: 999;
+			z-index: 100;
 			display: inline-block;
 			position: fixed;
 			visibility: hidden;
@@ -1186,17 +1186,16 @@
 		/* ------------------------------------------------------------------------------------------------------------ */
 		.scrolltotop {
 			position: fixed;
-			bottom: 4rem;
-			right: 8rem;
-			height: 4rem;
-			width: 4rem;
+			bottom: 4%;
+			right: 8%;
+			height: 40px;
+			width: 40px;
 			border-radius: 4px;
 			background: #CF9C67;
 			cursor: pointer;
-			z-index: 999999;
+			z-index: 999;
 		}
 		/* ------------------------------------------------------------------------------------------------------------ */
-
 
 		/* ------------------------------------------------------------------------------------------------------------ */
 
@@ -1229,7 +1228,57 @@
 			.hoc {
 				max-width: 90%;
 			}
-			#topbar {}
+			#topbar {
+				display: none;
+				justify-content: space-between;
+				align-items: center;
+				position: fixed;
+				top: 0; bottom: 0; left: 0; right: 0;
+				background: #000;
+				z-index: 999999;
+			}
+
+			#topbar ul {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				flex-direction: column;
+				height: 70%;
+				width: 100%;
+				z-index: 999998;
+			}
+			.burgermenu {
+				position: fixed;
+				top: 4%;
+				right: 8%;
+				height: 20px;
+				width: 40px;
+				z-index: 999999;
+			}
+
+			.bugermenuline {
+				height: 3px;
+				width: 100%;
+				background: #CF9C67;
+			}
+
+			.bugermenuline::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				height: 3px;
+				width: 100%;
+				background: #CF9C67;
+			}
+			.bugermenuline::after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				height: 3px;
+				width: 100%;
+				background: #CF9C67;
+			}
 			#header {
 				padding: 30px 0;
 			}
